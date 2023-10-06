@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>homework_2_1_form</title>
+    <link rel="stylesheet" href="from.css" />
+  </head>
+
+  <body>
+    <div class="register">
+      <!-- 表头 -->
+      <h1>欢迎注册会员</h1>
+      <!-- 手机号码 -->
+      <div class=" ">
+        <label for="phone">手机号码:</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          maxlength="11"
+          placeholder="11位手机号"
+        />
+        <span>必填</span>
+      </div>
+      <!-- 创建密码 -->
+      <div class=" ">
+        <label for="password">创建密码:</label>
+        <input
+          type="text"
+          id="password"
+          name="pwd"
+          maxlength="8"
+          placeholder="8位密码"
+        />
+        <span>必填</span>
+      </div>
+      <!-- 注册邮箱 -->
+      <div class=" ">
+        <label for="email">注册邮箱:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="例如:wustzz@sina.com"
+        />
+        <span>必填</span>
+      </div>
+      <!-- 验证码 -->
+      <div class="check">
+        <label for="Check_Input">验证码:</label>
+        <input
+          type="text"
+          name="code"
+          id="Check_Input"
+          class="Check_code"
+          placeholder="请输入验证码"
+        />
+        <canvas
+          id="canvas"
+          width="60"
+          height="20"
+          onclick="cli()"
+          style="border: 1px solid #ccc; border-radius: 5px"
+        ></canvas>
+      </div>
+      <!-- 性别   -->
+      <div class="sex">
+        <label id="sex1" for="sex">性别:</label>
+        <label id="sexm">
+          <input
+            type="radio"
+            name="sex"
+            value="male"
+            checked="checked"
+          />男</label
+        >
+        <label> <input type="radio" name="sex" value="female" />女 </label>
+      </div>
+      <!-- 生日 -->
+      <div class="birth">
+        <label>生日:</label>
+        <input id="birth" type="date" name="mydate" />
+      </div>
+      <!-- 年龄 -->
+      <div class="age">
+        <label for="age">年龄:</label>
+        <input type="text" id="age" name="age" />
+      </div>
+      <!-- 籍贯 -->
+      <div class="jiguan">
+        <label>籍贯:</label>
+        <select onchange="changeprovince(this.value)">
+          <option>请选择省份</option>
+          <option value="0">湖北省</option>
+          <option value="1">河北省</option>
+          <option value="2">河南省</option>
+          <option value="3">山西省</option>
+          <option value="4">山东省</option>
+        </select>
+        <select id="city">
+          <option>请选择城市</option>
+        </select>
+      </div>
+      <!-- 学历 -->
+      <div class="xueli">
+        <label>个人学历:</label>
+        <select name="education">
+          <option>--请选择个人学历--</option>
+          <option value="0">小学</option>
+          <option value="1">初中</option>
+          <option value="2">高中</option>
+          <option value="3">本科</option>
+          <option value="4">研究生</option>
+        </select>
+      </div>
+      <!-- 月薪 -->
+      <div class="salary">
+        <label>月薪:</label>
+        <input
+          type="range"
+          id="salary"
+          name="salary"
+          min="0"
+          max="10000"
+          step="100"
+          value="6000"
+        />
+        <span id="msg"></span>
+      </div>
+      <!-- 个人爱好 -->
+      <div class="hobby">
+        <label>个人爱好:</label>
+        <label style="margin-left: -10px">
+          <input type="checkbox" name="like" value="singing" />唱歌
+        </label>
+        <label>
+          <input type="checkbox" name="like" value="running" />跑步
+        </label>
+        <label>
+          <input type="checkbox" name="like" value="swimming" />游泳
+        </label>
+      </div>
+      <!-- 个人照片 -->
+      <form method="post" action="#" enctype="multipart/form-data">
+        <br />
+        <label>个人照片:</label>
+        <input type="file" id="test-image-file" name="test" />
+
+        <div
+          id="test-image-preview"
+          style="
+            margin-left: 85px;
+            margin-bottom: 10px;
+            border: 1px solid silver;
+            width: 170px;
+            height: 160px;
+            background-repeat: no-repeat;
+            padding-left: 5px;
+            background-position: center;
+          "
+        ></div>
+        <div id="test-file-info"></div>
+      </form>
+      <!-- 个人简历 -->
+      <div class="jianli">
+        <label>个人简历:</label>
+        <textarea name="intro" cols="40" rows="10"></textarea>
+      </div>
+      <!-- 页脚 -->
+      <div class="footer">
+        <input type="submit" value="提交" />
+        <input type="reset" value="重填" />
+      </div>
+    </div>
+
+    <script src="check.js"></script>
+  </body>
+</html>
