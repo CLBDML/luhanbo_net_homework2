@@ -1,0 +1,51 @@
+/* 设置 h1 标签的样式 */
+h1 {
+  color: aqua; /* 设置字体颜色为水绿色 */
+}
+
+/* 设置类名为 register 的元素的样式 */
+.register {
+  width: 600px; /* 设置宽度为 600px */
+  background-color: rgb(240, 255, 255); /* 设置背景颜色为淡青色 */
+  margin: 10px auto; /* 设置外边距，上下为 10px，左右自动 */
+  border: 1px solid rgb(0, 0, 0); /* 设置边框为 1px 的黑色实线 */
+  border: none; /* 取消边框 */
+  border-radius: 2px; /* 设置圆角为 2px */
+  margin-bottom: 12px; /* 设置下方外边距为 12px */
+  overflow: hidden; /* 隐藏溢出部分 */
+  padding: 0 0.625em; /* 设置内边距，上下为 0，左右为 0.625em */
+}
+
+/* 设置类名为 check 的元素的样式 */
+.check{
+  display: flex; /* 设置为弹性布局 */
+  align-items: center; /* 垂直居中对齐 */
+  gap: 5px; /* 设置子元素之间的间距为 5px */
+}
+
+/* 设置 span 标签的样式 */
+span {
+  color: red; /* 设置字体颜色为红色 */
+}
+
+/* 设置 label 标签的样式 */
+label {
+  cursor: pointer; /* 鼠标悬停时显示手型光标 */
+  display: inline-block; /* 设置为行内块元素 */
+  text-align: right; /* 文字右对齐 */
+  width: 70px; /* 设置宽度为 70px */
+  text-align: right; /* 再次设置文字右对齐 */
+  margin-bottom: 10px; /* 设置下方外边距为 10px */
+  margin-right: 10px; /* 设置右侧外边距为 10px */
+}
+
+/* 设置 input 标签的样式 */
+input {
+  font-size: inherit; /* 继承父元素的字体大小 */
+}
+
+/* 设置类名为 jianli 的元素的样式 */
+.jianli {
+  display: flex; /* 设置为弹性布局 */
+  align-items: center; /* 垂直居中对齐 */
+}
